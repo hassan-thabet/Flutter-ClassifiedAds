@@ -45,8 +45,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
    _onPressed() {
 
       setState(() {
-
         isLoading = true;
+
 
         if (
 
@@ -87,7 +87,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       }
                     else {
 
-                      Navigator.pushReplacementNamed(context, '/login'),
+                      Navigator.pushReplacementNamed(context, '/home'),
                       showDialog(
                         context: context,
                         builder: (BuildContext context) => CustomDialog(
@@ -122,7 +122,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           );
         }
 
-        isLoading = false;
+        // isLoading = false;
       });
     }
 

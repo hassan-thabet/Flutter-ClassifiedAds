@@ -46,20 +46,23 @@ class Authentication {
     );
 
      status = response.statusCode ;
-    // var data = json.decode(response.data);
-    //
-    // if (status) {
-    //   print('data : ${data["Error - StatusCode is : ${response.statusCode}"]}');
-    // } else {
-    //   print('data : ${data["api_token"]}');
-    // }
+
 
     switch (response.statusCode) {
       case 201:
-        var body = convert.jsonDecode(response.data);
-        var data = body['data'];
-        return User.fromJson(data);
+
+        var body = response.data;
+        //var data = body['data'];
+        print(body);
+        print('\n');
+        _save(body["api_token"]);
+        print("api token :  " + body["api_token"] + " was saved successfully");
+        print('\n');
+
+
+        return null;
         break;
+
       case 422:
         throw MissingFields();
         break;
