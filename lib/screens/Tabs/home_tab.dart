@@ -361,7 +361,8 @@ Widget _drowProductCard(Products products) {
                 height: 20,
               ),
               CircleAvatar(
-                 backgroundImage: NetworkImage(ApiHelper.USER_PHOTO + products.product_user.photo_url),
+                 backgroundImage:
+                  NetworkImage(ApiHelper.USER_PHOTO + products.product_user.photo_url),
                 radius: 25,
               ),
               SizedBox(
