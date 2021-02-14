@@ -1,6 +1,5 @@
 
 import 'package:classified_ads/models/product.dart';
-import 'package:classified_ads/models/product_user.dart';
 import 'package:classified_ads/utilities/api_helper.dart';
 import 'package:flutter/material.dart';
 

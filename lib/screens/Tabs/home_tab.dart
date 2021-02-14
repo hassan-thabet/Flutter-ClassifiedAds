@@ -14,8 +14,6 @@ class HomeTab extends StatefulWidget {
 }
 
 class _HomeTabState extends State<HomeTab> {
-  double _width;
-  double _height;
   CategoriesApi categoriesApi = CategoriesApi();
   ProductsApi productsApi = ProductsApi();
 
@@ -33,8 +31,6 @@ class _HomeTabState extends State<HomeTab> {
 
   @override
   Widget build(BuildContext context) {
-    _width = MediaQuery.of(context).size.width;
-    _height = MediaQuery.of(context).size.height;
 
     return Scaffold(
         appBar: AppBar(
@@ -361,8 +357,16 @@ Widget _drowProductCard(Products products) {
                 height: 20,
               ),
               CircleAvatar(
+
                  backgroundImage:
-                  NetworkImage(ApiHelper.USER_PHOTO + products.product_user.photo_url),
+                 NetworkImage(ApiHelper.USER_PHOTO + products.product_user.photo_url),
+
+                // NetworkImage(
+                //   (ApiHelper.USER_PHOTO + products.product_user.photo_url != null)
+                //       ? ApiHelper.USER_PHOTO + products.product_user.photo_url
+                //       : "https://immedilet-invest.com/wp-content/uploads/2016/01/user-placeholder.jpg" ,
+                // ),
+
                 radius: 25,
               ),
               SizedBox(
@@ -383,15 +387,6 @@ Widget _drowProductCard(Products products) {
                 ? ApiHelper.IMAGES + products.product_images[0]
                 : "https://www.formagenda.com/wp-content/uploads/woocommerce-placeholder-400x400@2x.png",
           ),
-
-          // (products.product_images.length > 0)
-          //     ? Image(
-          //         image: NetworkImage(ApiHelper.IMAGES + products.product_images[0]),
-          //       )
-          //     : Container(
-          //         child: Image.network(
-          //             "https://www.formagenda.com/wp-content/uploads/woocommerce-placeholder-400x400@2x.png"),
-          //       ),
           SizedBox(
             height: 20,
           ),

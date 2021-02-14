@@ -94,5 +94,6 @@ class ProductsApi {
         return null;
         break;
     }
+    return null;
   }
 }

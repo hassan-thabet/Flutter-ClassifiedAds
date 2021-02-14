@@ -19,7 +19,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     Authentication authentication = Authentication();
 
-    String statusMessage = '';
+    // String statusMessage = '';
 
     final TextEditingController _emailController = new TextEditingController();
 

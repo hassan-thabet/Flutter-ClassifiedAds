@@ -10,19 +10,26 @@ class _MessagesTabState extends State<MessagesTab> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Messages'),
+        automaticallyImplyLeading: false,
+        brightness: Brightness.light,
+        backgroundColor: Color(0xFFf0f0f0),
+        elevation: 0.0,
+        centerTitle: false,
+        title: Padding(
+          padding: const EdgeInsets.only(top: 8.0, left: 16),
+          child: Text('Messages',
+              style: TextStyle(
+                fontFamily: 'Pacifico',
+                fontSize: 22,
+                fontWeight: FontWeight.w300,
+                color: Colors.black87.withAlpha(200),
+              )),
+        ),
+
       ),
       body: Container(
-        child: Column(
-          children: [
-            Container(height: 100, width: double.infinity,color: Colors.yellow,),
-            Spacer(),
-            Center(child: Text('Messages Content'),),
-            Spacer(),
-            Container(height: 100, width: double.infinity,color: Colors.red,),
+        child: Center(child: Text('Messages Content'),),
 
-          ],
-        )
       ),
     );
   }

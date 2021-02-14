@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:classified_ads/api/products_api.dart';
 import 'package:classified_ads/component/custom_dialog.dart';
 import 'package:classified_ads/ui/custom_colors.dart';

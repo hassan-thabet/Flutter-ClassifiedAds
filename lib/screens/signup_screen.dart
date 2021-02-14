@@ -92,7 +92,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         context: context,
                         builder: (BuildContext context) => CustomDialog(
                           title: "Done ",
-                          description: "Your data saved successfully , Login now using email and password",
+                          description: "Your data has been saved successfully , Thank you for joining our community",
                           buttonText: "Ok",
                           icon: Icon(
                             Icons.done,
@@ -155,23 +155,23 @@ class _SignUpScreenState extends State<SignUpScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            // SizedBox(
-            //   height: 100,
-            // ),
-            // Padding(
-            //   padding: const EdgeInsets.all(20.0),
-            //   child: Text('SIGN UP',
-            //       style: TextStyle(
-            //         letterSpacing: 8,
-            //         fontFamily: 'PoiretOne',
-            //         fontSize: 38,
-            //         color: Colors.white,
-            //         fontWeight: FontWeight.w700,
-            //       )),
-            // ),
-            // SizedBox(
-            //   height: 40,
-            // ),
+            SizedBox(
+              height: 100,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Text('SIGN UP',
+                  style: TextStyle(
+                    letterSpacing: 8,
+                    fontFamily: 'PoiretOne',
+                    fontSize: 38,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w700,
+                  )),
+            ),
+            SizedBox(
+              height: 40,
+            ),
             Expanded(
                 child: Container(
               decoration: BoxDecoration(

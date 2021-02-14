@@ -19,17 +19,6 @@ class Authentication {
       String file_path , String file_name ,
 
     ) async {
-
-    // Map<String, String> body = {
-    //   'first_name': first_name,
-    //   'last_name': last_name,
-    //   'email': email,
-    //   'mobile' : mobile,
-    //   'password': password,
-    //   // "photo_url": await MultipartFile.fromFile(file_path, filename:file_name),
-    // };
-
-
     FormData body =
          new FormData.fromMap({
            "first_name" : first_name,
